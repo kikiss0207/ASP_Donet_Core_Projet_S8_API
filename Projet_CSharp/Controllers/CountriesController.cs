@@ -50,6 +50,44 @@ namespace Projet_CSharp.Controllers
             return countrie;
         }
 
+        // GET: api/Countries/5/population/2022
+        [HttpGet("{id}/population/{year}")]
+        public async Task<ActionResult<String>> GetPopulationByCountryAndYear(int id, int year)
+        {
+            if (_context.Countrie == null)
+            {
+                return NotFound();
+            }
+            int population = 0;
+            var countrie = await _context.Countrie.Include(c => c.List_pop).FirstOrDefaultAsync(c => c.Id == id);
+
+            if (countrie == null)
+            {
+                return NotFound();
+            }
+
+            var pop = countrie.List_pop.FirstOrDefault(p => p.Annee == year);
+            var name = await _context.Countrie
+                                .Where(c => c.Id == id)
+                                .Select(c => c.Country_name)
+                                .FirstOrDefaultAsync();
+            var annee= await _context.Pop
+                                .Where(p => p.Id_country == id)
+                                .Select(p => p.Annee)
+                                .FirstOrDefaultAsync();
+            if (pop == null)
+            {
+                return NotFound();
+            }
+            if (pop != null)
+            {
+                population += pop.Nbre_pop;
+            }
+
+            return String.Concat("La population du pays ", name, " en ",annee," est de : ", population);
+        }
+
+
         // PUT: api/Countries/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

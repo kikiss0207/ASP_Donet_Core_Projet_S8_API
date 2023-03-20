@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -29,7 +30,7 @@ namespace Projet_CSharp.Controllers
           {
               return NotFound();
           }
-            return await _context.Continent.Include("List_country").ToListAsync();
+            return await _context.Continent.Include("List_country.List_pop").ToListAsync();
         }
 
         // GET: api/Continents/5
@@ -48,6 +49,29 @@ namespace Projet_CSharp.Controllers
             }
 
             return continent;
+        }
+
+        // GET: api/Countries/1/population/2022
+        [HttpGet("{id}/population/{year}")]
+        public async Task<ActionResult<String>> GetContinentPopulation(int id, int year)
+        {
+            var countries = await _context.Countrie.Include(c => c.List_pop)
+                                           .Where(c => c.Id_Continent == id)
+                                           .ToListAsync();
+            int population = 0;
+            var namem = await _context.Continent
+                                .Where(c => c.Id == id)
+                                .Select(c => c.Name)
+                                .FirstOrDefaultAsync();
+            foreach (var country in countries)
+            {
+                var pop = country.List_pop.FirstOrDefault(p => p.Annee == year);
+                if (pop != null)
+                {
+                    population += pop.Nbre_pop;
+                }
+            }
+            return String.Concat("La population du Continent ", namem, " est de :", population);
         }
 
         // PUT: api/Continents/5
@@ -119,7 +143,10 @@ namespace Projet_CSharp.Controllers
             return NoContent();
         }
 
-        private bool ContinentExists(int id)
+      
+
+
+private bool ContinentExists(int id)
         {
             return (_context.Continent?.Any(e => e.Id == id)).GetValueOrDefault();
         }

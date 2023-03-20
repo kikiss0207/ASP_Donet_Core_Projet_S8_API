@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ET0kVOuC+YJnlUMEqEpezdHHKlz18Vm6UIOZN6qtCpCUF9CZCNZVEVj0RfDPkUdOvoBUHj63VH2/nPs0wgpCng==",
+  "dgSpecHash": "XlX9woTwlEw+rlsZPeVHf9Gy94B0eg7lr6+iZDtOVLBdndVra6KBZ0pJNHIITqMRSfBy6KhcuXYTz3Jh4dzOrw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\source\\repos\\Projet_CSharp\\Projet_CSharp\\Projet_CSharp.csproj",
+  "projectFilePath": "C:\\Users\\user\\source\\repos\\ASP_Donet_Core_Projet_S8_API\\Projet_CSharp\\Projet_CSharp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
