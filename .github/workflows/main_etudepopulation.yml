@@ -3,6 +3,11 @@
 
 name: Build and deploy ASP.Net Core app to Azure Web App - etudepopulation
 
+env:
+  AZURE_WEBAPP_NAME: etudepopulation    # set this to your application's name
+  AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
+  DOTNET_VERSION: '6.0'           # set this to the dot net version to use
+
 on:
   push:
     branches:
@@ -13,13 +18,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: Projet_CSharp
+
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Set up .NET Core
-        uses: actions/setup-dotnet@v1
+        uses: actions/setup-dotnet@v2
         with:
-          dotnet-version: '6.0.x'
+          dotnet-version: '6.0.0'
           include-prerelease: true
 
       - name: Build with dotnet
@@ -27,6 +36,12 @@ jobs:
 
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+      
+      -name: dotnet install ef
+        run: dotnet tool install -g dotnet -ef
+
+      -name: dotnet bundle migration
+        run: dotnet ef migrations bundle -p Projet_CSharp.csproj -o ${{env.DOTNET_ROOT}}/myapp/migrate
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -53,5 +68,5 @@ jobs:
         with:
           app-name: 'etudepopulation'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BCC4E093720B4A4CBEAA771897069D32 }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: .
