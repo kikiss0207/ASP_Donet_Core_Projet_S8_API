@@ -37,7 +37,7 @@ jobs:
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
       
       - name: dotnet install ef
-        run: dotnet tool install -g dotnet -ef
+        run: dotnet tool install -g dotnet-ef
 
       - name: dotnet bundle migration
         run: dotnet ef migrations bundle -p Projet_CSharp.csproj -o ${{env.DOTNET_ROOT}}/myapp/migrate
