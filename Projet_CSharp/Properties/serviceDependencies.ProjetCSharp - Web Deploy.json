@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/etudepopulation-server/databases/etudepopulation-database",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:Projet_CSharpContext",
+      "dynamicId": null
+    },
+    "apis1": {
+      "apiEndpoint": "https://etudepopulation-apm.azure-api.net/",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/etudepopulation-apm/apis/ProjetCSharp",
+      "type": "apis.azure"
+    }
+  }
+}
