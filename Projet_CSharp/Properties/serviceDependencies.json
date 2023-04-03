@@ -1,12 +1,3 @@
 {
-  "dependencies": {
-    "mssql1": {
-      "type": "mssql",
-      "connectionId": "ConnectionStrings:Projet_CSharpContext",
-      "dynamicId": null
-    },
-    "apis1": {
-      "type": "apis"
-    }
-  }
+  "dependencies": {}
 }
