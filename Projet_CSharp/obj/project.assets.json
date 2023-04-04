@@ -10237,19 +10237,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "C:\\Users\\ed\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\source\\repos\\ASP_Donet_Core_Projet_S8_API\\Projet_CSharp\\Projet_CSharp.csproj",
+      "projectUniqueName": "C:\\Users\\ed\\Documents\\Nouveau dossier (2)\\Projet_CSharp\\Projet_CSharp.csproj",
       "projectName": "Projet_CSharp",
-      "projectPath": "C:\\Users\\user\\source\\repos\\ASP_Donet_Core_Projet_S8_API\\Projet_CSharp\\Projet_CSharp.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\source\\repos\\ASP_Donet_Core_Projet_S8_API\\Projet_CSharp\\obj\\",
+      "projectPath": "C:\\Users\\ed\\Documents\\Nouveau dossier (2)\\Projet_CSharp\\Projet_CSharp.csproj",
+      "packagesPath": "C:\\Users\\ed\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ed\\Documents\\Nouveau dossier (2)\\Projet_CSharp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ed\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
