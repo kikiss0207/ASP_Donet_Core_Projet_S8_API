@@ -11,6 +11,6 @@
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_DbContextTypeFullName>Projet_CSharp.Data.Projet_CSharpContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
-    <NameOfLastUsedPublishProfile>C:\Users\user\source\repos\ASP_Donet_Core_Projet_S8_API\Projet_CSharp\Properties\PublishProfiles\ProjetCSharp - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>C:\Users\ed\Documents\Nouveau dossier %282%29\.github\workflows\ProjetC.yml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

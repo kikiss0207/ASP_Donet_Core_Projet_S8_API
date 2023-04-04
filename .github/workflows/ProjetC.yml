@@ -1,8 +1,9 @@
 name: Générer et déployer une application .NET Core sur l'application web ProjetC
 on:
-  push:
-    branches:
-    - main
+  [push, pull_request]
+    #push:
+   # branches:
+   # - main
 env:
   AZURE_WEBAPP_NAME: ProjetC
   AZURE_WEBAPP_PACKAGE_PATH: Projet_CSharp\publish
