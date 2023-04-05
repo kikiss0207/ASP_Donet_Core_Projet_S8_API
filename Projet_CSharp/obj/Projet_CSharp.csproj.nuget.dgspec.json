@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ed\\Documents\\Nouveau dossier (2)\\Projet_CSharp\\Projet_CSharp.csproj": {}
+    "C:\\Users\\ed\\Documents\\Nouveau dossier (3)\\Projet_CSharp\\Projet_CSharp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ed\\Documents\\Nouveau dossier (2)\\Projet_CSharp\\Projet_CSharp.csproj": {
+    "C:\\Users\\ed\\Documents\\Nouveau dossier (3)\\Projet_CSharp\\Projet_CSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ed\\Documents\\Nouveau dossier (2)\\Projet_CSharp\\Projet_CSharp.csproj",
+        "projectUniqueName": "C:\\Users\\ed\\Documents\\Nouveau dossier (3)\\Projet_CSharp\\Projet_CSharp.csproj",
         "projectName": "Projet_CSharp",
-        "projectPath": "C:\\Users\\ed\\Documents\\Nouveau dossier (2)\\Projet_CSharp\\Projet_CSharp.csproj",
+        "projectPath": "C:\\Users\\ed\\Documents\\Nouveau dossier (3)\\Projet_CSharp\\Projet_CSharp.csproj",
         "packagesPath": "C:\\Users\\ed\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ed\\Documents\\Nouveau dossier (2)\\Projet_CSharp\\obj\\",
+        "outputPath": "C:\\Users\\ed\\Documents\\Nouveau dossier (3)\\Projet_CSharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ed\\AppData\\Roaming\\NuGet\\NuGet.Config",
